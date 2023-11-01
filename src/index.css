@@ -3,6 +3,7 @@
 :root {
   font-family: "Gilroy-Regular", sans-serif;
 }
+
 h1,
 h2,
 h3,
@@ -20,5 +21,4 @@ a {
 body {
   min-width: 100%;
   min-height: 100vh;
-  padding: 0 100px;
 }
