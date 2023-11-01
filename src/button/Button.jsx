@@ -1,8 +1,8 @@
 import styled from "styled-components"
 
-export const Button = ({ children, callUs, isDone }) => {
+export const Button = ({ children, onClick, background }) => {
   return (
-    <StyledButton onClick={callUs} className={isDone ? isDone : "#4267A4"}>
+    <StyledButton onClick={onClick} className={background}>
       {children}
     </StyledButton>
   )
