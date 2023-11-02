@@ -1,19 +1,12 @@
-import styled from "styled-components"
-import Header from "./layout/header/Header"
+import { withLayout } from "./layout/Layout"
+import MainPage from "pages/MainPage"
 
-export default function App() {
+function App() {
   return (
-    <StyledLayoutMain>
-      <Header />
-      <h1>Hello</h1>
-    </StyledLayoutMain>
+    <div>
+      <MainPage />
+    </div>
   )
 }
-const StyledLayoutMain = styled.div`
-  max-width: 1920px;
-  height: 100vh;
-  padding: 0 80px;
-  margin: auto;
-  display: grid;
-  grid-template-rows: auto 1fr;
-`
+
+export default withLayout(App)
