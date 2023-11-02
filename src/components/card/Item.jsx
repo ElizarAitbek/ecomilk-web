@@ -1,12 +1,13 @@
 import React from "react"
 import styled from "styled-components"
+import { WhiteMilk } from "../../assets/img"
 import { Button } from "../button/Button"
 
-export const Item = ({ image, imgMilk, title, colorCard, width, height }) => {
+export const Item = ({ image, title, colorCard, width, height, id }) => {
   return (
-    <ContainerItem className={colorCard}>
-      <Image1 src={imgMilk} alt="" />
-      <Image src={image} alt="" width={width} height={height} />
+    <ContainerItem className={colorCard} id={id}>
+      <Milk src={WhiteMilk} alt="milk" />
+      <Image src={image} alt="catalog-milks" width={width} height={height} />
       <NameCatalog>
         <h3>{title}</h3>
         <Button color={colorCard}>Узнать подробнее</Button>
@@ -25,6 +26,21 @@ const ContainerItem = styled.div`
   border-radius: 10px;
   position: relative;
   background-color: ${(props) => props.className};
+
+  & ::before {
+    display: ${(props) => (props.id === 2 ? "inline-block" : "none")};
+    content: url("/public/flower.svg");
+    position: absolute;
+    left: -40px;
+    bottom: -70px;
+  }
+  & ::after {
+    display: ${(props) => (props.id === 2 ? "inline-block" : "none")};
+    content: url("/public/flower.svg");
+    position: absolute;
+    bottom: 520px;
+    right: -35px;
+  }
 `
 
 const Image = styled.img`
@@ -35,7 +51,7 @@ const Image = styled.img`
   z-index: 1;
 `
 
-const Image1 = styled.img`
+const Milk = styled.img`
   position: absolute;
   right: -80px;
   width: 550px;

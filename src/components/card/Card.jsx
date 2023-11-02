@@ -19,5 +19,4 @@ const Wrapper = styled.section`
   grid-template-rows: repeat(3, 1fr);
   grid-column-gap: 35px;
   grid-row-gap: 43px;
-  margin: 0 auto;
 `

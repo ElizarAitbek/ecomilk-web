@@ -7,27 +7,23 @@ import {
   Milk,
   ProcessedChocolateCheese,
   SourCream,
-  WhiteMilk,
 } from "../assets/img/index.jsx"
 
 export const cartItems = [
   {
     id: 1,
-    title: "Молоко ",
+    title: "Молоко",
     width: "240px",
     height: "400.9px",
     colorCard: "#B49FC3",
     image: Milk,
-    imgMilk: WhiteMilk,
   },
   {
     id: 2,
-    title: "БИО Кефиры",
     width: "240px",
     height: "400.9px",
     colorCard: "#B5CB07",
     image: Biokefir,
-    imgMilk: WhiteMilk,
   },
   {
     id: 3,
@@ -36,7 +32,6 @@ export const cartItems = [
     height: "350.9px",
     colorCard: "#D2AF4A",
     image: Butter,
-    imgMilk: WhiteMilk,
   },
   {
     id: 4,
@@ -45,7 +40,6 @@ export const cartItems = [
     height: "190px",
     colorCard: "#A5BADD",
     image: SourCream,
-    imgMilk: WhiteMilk,
   },
   {
     id: 5,
@@ -54,7 +48,6 @@ export const cartItems = [
     height: "190px",
     colorCard: "#9E672D",
     image: ProcessedChocolateCheese,
-    imgMilk: WhiteMilk,
   },
   {
     id: 6,
@@ -63,7 +56,6 @@ export const cartItems = [
     height: "390.9px",
     colorCard: "#F59F9F",
     image: Kefir,
-    imgMilk: WhiteMilk,
   },
   {
     id: 7,
@@ -72,7 +64,6 @@ export const cartItems = [
     height: "303px",
     colorCard: "#4D6895",
     image: Curd,
-    imgMilk: WhiteMilk,
   },
   {
     id: 8,
@@ -81,6 +72,5 @@ export const cartItems = [
     height: "410px",
     colorCard: "#37A1C5",
     image: CondensedMilk,
-    imgMilk: WhiteMilk,
   },
 ]
