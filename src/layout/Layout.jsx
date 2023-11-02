@@ -1,4 +1,5 @@
-import { Header } from "./header/Header"
+import Header from "./header/Header"
+import Footer from "./footer/Footer"
 import styled from "styled-components"
 
 function Layout({ children }) {
@@ -6,6 +7,7 @@ function Layout({ children }) {
     <StyledLayoutMain>
       <Header />
       <div>{children}</div>
+      <Footer />
     </StyledLayoutMain>
   )
 }

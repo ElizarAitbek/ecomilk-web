@@ -1,21 +1,20 @@
 import styled from "styled-components"
+import { Link } from "react-router-dom"
 
-// TODO: Переписать на Link при подключении роутинга
-
-export const Header = () => {
+export default function Header() {
   return (
     <StyledHeaderMain>
-      <a href="/">
+      <Link to="/">
         <img src="/logo.svg" alt="ecomilk logo" />
-      </a>
+      </Link>
 
       <StyledHeaderNav>
-        <a href="#">Главная</a>
-        <a href="#">О компании</a>
-        <a href="#">Новости</a>
-        <a href="#">Акции</a>
-        <a href="#">Каталог</a>
-        <a href="#">Вакансии</a>
+        <Link to="/">Главная</Link>
+        <Link to="/about">О компании</Link>
+        <Link to="/news">Новости</Link>
+        <Link to="/dicounts">Акции</Link>
+        <Link to="/dicounts">Каталог</Link>
+        <Link to="/jobs">Вакансии</Link>
       </StyledHeaderNav>
 
       <StyledHeaderButton>Позвонить нам</StyledHeaderButton>
