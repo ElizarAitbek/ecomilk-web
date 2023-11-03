@@ -7,3 +7,14 @@ export { default as Milk } from "./milk.png"
 export { default as ProcessedChocolateCheese } from "./processed-chocolate-cheese.png"
 export { default as SourCream } from "./sour-cream.png"
 export { default as WhiteMilk } from "./white-milk.png"
+<<<<<<< HEAD
+=======
+export { default as Strawberry } from "./Strawberry.png"
+export { default as Smetana } from "./smetana.png"
+export { default as ProcessedCheese } from "./processed.png"
+export { default as BlueKefir } from "./blueKefir.png"
+export { default as CurdKiwi } from "./curd-kiwi.png"
+export { default as CurdStrawberry } from "./curd-strawberry.png"
+export { default as CurdChocolate } from "./curd-chocolate.png"
+export { default as MiniCondensedMilk } from "./mini-condensed-milk.png"
+>>>>>>> ab4724f (initial commit)
