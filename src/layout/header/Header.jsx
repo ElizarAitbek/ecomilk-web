@@ -12,8 +12,8 @@ export default function Header() {
         <Link to="/">Главная</Link>
         <Link to="/about">О компании</Link>
         <Link to="/news">Новости</Link>
-        <Link to="/dicounts">Акции</Link>
-        <Link to="/dicounts">Каталог</Link>
+        <Link to="/discounts">Акции</Link>
+        <Link to="/discounts">Каталог</Link>
         <Link to="/jobs">Вакансии</Link>
       </StyledHeaderNav>
 

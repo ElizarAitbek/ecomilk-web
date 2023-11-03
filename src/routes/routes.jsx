@@ -1,37 +1,45 @@
+import { lazy, Suspense } from "react"
 import { createBrowserRouter } from "react-router-dom"
+import LoadingIndicator from "../components/loader/Loader"
 
-import ErrorPage from "pages/ErrorPage"
-import AboutPage from "pages/AboutPage"
-import CatalogPage from "pages/CatalogPage"
-import DiscountsPage from "pages/DiscountsPage"
-import JobOpportunitiesPage from "pages/JobOpportunitiesPage"
-import NewsPage from "pages/NewsPage"
-import App from "../App"
+const ErrorPage = lazy(() => import("pages/ErrorPage"))
+const AboutPage = lazy(() => import("pages/AboutPage"))
+const CatalogPage = lazy(() => import("pages/CatalogPage"))
+const DiscountsPage = lazy(() => import("pages/DiscountsPage"))
+const JobOpportunitiesPage = lazy(() => import("pages/JobOpportunitiesPage"))
+const NewsPage = lazy(() => import("pages/NewsPage"))
+const App = lazy(() => import("../App"))
+
+const LazyComponent = (Component) => (
+  <Suspense fallback={<LoadingIndicator />}>
+    <Component />
+  </Suspense>
+)
 
 export const app_routes = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
-    errorElement: <ErrorPage />,
+    element: LazyComponent(App),
+    errorElement: LazyComponent(ErrorPage),
   },
   {
     path: "/about",
-    element: <AboutPage />,
+    element: LazyComponent(AboutPage),
   },
   {
     path: "/catalog",
-    element: <CatalogPage />,
+    element: LazyComponent(CatalogPage),
   },
   {
-    path: "/dicounts",
-    element: <DiscountsPage />,
+    path: "/discounts",
+    element: LazyComponent(DiscountsPage),
   },
   {
     path: "/jobs",
-    element: <JobOpportunitiesPage />,
+    element: LazyComponent(JobOpportunitiesPage),
   },
   {
     path: "/news",
-    element: <NewsPage />,
+    element: LazyComponent(NewsPage),
   },
 ])
