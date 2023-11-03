@@ -23,10 +23,9 @@ export const withLayout = (Component) => {
 }
 
 const StyledLayoutMain = styled.div`
-  max-width: 1920px;
+  max-width: 100%;
+
   height: 100vh;
-  padding: 0 80px;
-  margin: auto;
   display: grid;
   grid-template-rows: auto 1fr auto;
 `

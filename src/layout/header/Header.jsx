@@ -26,11 +26,19 @@ const StyledHeaderMain = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 61px;
+
+  padding: 0 80px;
+  margin: auto;
+
+  position: absolute;
+  z-index: 1;
+  top: 20px;
+  max-width: 1920px;
+  width: 100%;
+
   img {
     width: 60px;
   }
-  background-color: grey;
 `
 const StyledHeaderNav = styled.nav`
   display: flex;
