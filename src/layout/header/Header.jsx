@@ -31,6 +31,7 @@ const StyledHeaderMain = styled.header`
   margin: auto;
 
   position: absolute;
+  z-index: 1;
   top: 20px;
   max-width: 1920px;
   width: 100%;
