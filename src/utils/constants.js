@@ -15,7 +15,7 @@ import {
   CurdKiwi,
   CurdStrawberry,
   MiniCondensedMilk,
-} from "../assets/img/index.jsx"
+} from "../assets/index.js"
 
 export const cardItems = [
   {

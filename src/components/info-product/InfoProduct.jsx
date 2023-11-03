@@ -1,13 +1,16 @@
 import React from "react"
 import styled from "styled-components"
 import { useCategoryMilk } from "../../hooks/useCategoryMilk"
-import { catalogItem } from "../../utils/constants"
-import { Item } from "../card/Item"
+
+import { Item } from "../UI/card/Item"
 import { CatalogCard } from "./CatalogCard"
+import { catalogItem } from "../../utils/constants"
 
 export const InfoProduct = () => {
   const { category } = useCategoryMilk()
   const newCatalogItem = catalogItem.find((item) => item.name === category)
+
+  console.log(newCatalogItem)
   return (
     <WrapperProductInfo>
       <CatalogTitle>Каталог</CatalogTitle>

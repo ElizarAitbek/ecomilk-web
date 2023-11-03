@@ -8,6 +8,7 @@ const CatalogPage = lazy(() => import("pages/CatalogPage"))
 const DiscountsPage = lazy(() => import("pages/DiscountPage/DiscountsPage"))
 const JobOpportunitiesPage = lazy(() => import("pages/JobOpportunitiesPage"))
 const NewsPage = lazy(() => import("pages/NewsPage"))
+const ProductInfoPage = lazy(() => import("pages/PruductInfoPage"))
 const App = lazy(() => import("../App"))
 
 const LazyComponent = (Component) => (
@@ -45,5 +46,9 @@ export const app_routes = createBrowserRouter([
   {
     path: "/news",
     element: LazyComponent(NewsPage),
+  },
+  {
+    path: "/product-info",
+    element: LazyComponent(ProductInfoPage),
   },
 ])

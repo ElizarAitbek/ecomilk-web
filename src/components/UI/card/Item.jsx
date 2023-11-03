@@ -1,11 +1,16 @@
 import React from "react"
 import styled from "styled-components"
-import { useCategoryMilk } from "../../hooks/useCategoryMilk"
 import { Button } from "../button/Button"
 import { CardImage } from "./CardImage"
+import { useNavigate } from "react-router-dom"
 
 export const Item = ({ title, titlePercent, colorCard, width, height, image }) => {
-  const { ProducMilkId } = useCategoryMilk()
+  let navigate = useNavigate()
+
+  const hadleNavigateToProductPage = (productTitle) => {
+    navigate(`/product-info?title=${encodeURIComponent(productTitle)}`)
+  }
+
   return (
     <ContainerItem className={colorCard} id={colorCard}>
       <CardImage width={width} height={height} image={image} />
@@ -15,7 +20,7 @@ export const Item = ({ title, titlePercent, colorCard, width, height, image }) =
         ) : (
           <>
             <h3>{title}</h3>
-            <Button color={colorCard} onClick={() => ProducMilkId(title)}>
+            <Button color={colorCard} onClick={() => hadleNavigateToProductPage(title)}>
               Узнать подробнее
             </Button>
           </>

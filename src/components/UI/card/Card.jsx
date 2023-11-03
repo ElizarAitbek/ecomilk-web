@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
-import { cardItems } from "../../utils/constants.js"
-import { Item } from "./Item"
+import { cardItems } from "../../../utils/constants.js"
+import { Item } from "./Item.jsx"
 
 export const Card = () => {
   return (

@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { WhiteMilk } from "../../assets/img"
+import { WhiteMilk } from "../../../assets/index"
 
 export const CardImage = ({ image, width, height }) => {
   return (
