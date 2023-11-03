@@ -5,7 +5,7 @@ import LoadingIndicator from "../components/loader/Loader"
 const ErrorPage = lazy(() => import("pages/ErrorPage"))
 const AboutPage = lazy(() => import("pages/AboutPage"))
 const CatalogPage = lazy(() => import("pages/CatalogPage"))
-const DiscountsPage = lazy(() => import("pages/DiscountsPage"))
+const DiscountsPage = lazy(() => import("pages/DiscountPage/DiscountsPage"))
 const JobOpportunitiesPage = lazy(() => import("pages/JobOpportunitiesPage"))
 const NewsPage = lazy(() => import("pages/NewsPage"))
 const App = lazy(() => import("../App"))
@@ -25,18 +25,22 @@ export const app_routes = createBrowserRouter([
   {
     path: "/about",
     element: LazyComponent(AboutPage),
+    errorElement: LazyComponent(ErrorPage),
   },
   {
     path: "/catalog",
     element: LazyComponent(CatalogPage),
+    errorElement: LazyComponent(ErrorPage),
   },
   {
     path: "/discounts",
     element: LazyComponent(DiscountsPage),
+    errorElement: LazyComponent(ErrorPage),
   },
   {
     path: "/jobs",
     element: LazyComponent(JobOpportunitiesPage),
+    errorElement: LazyComponent(ErrorPage),
   },
   {
     path: "/news",
