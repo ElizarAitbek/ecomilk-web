@@ -1,12 +1,12 @@
 import React from "react"
 import styled from "styled-components"
-import { cartItems } from "../../utils/constants.js"
+import { cardItems } from "../../utils/constants.js"
 import { Item } from "./Item"
 
-export const Cart = () => {
+export const Card = () => {
   return (
     <Wrapper>
-      {cartItems.map((item) => (
+      {cardItems.map((item) => (
         <Item key={item.id} {...item} />
       ))}
     </Wrapper>

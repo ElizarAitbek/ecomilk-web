@@ -1,16 +1,25 @@
 import React from "react"
 import styled from "styled-components"
-import { WhiteMilk } from "../../assets/img"
+import { useCategoryMilk } from "../../hooks/useCategoryMilk"
 import { Button } from "../button/Button"
+import { CardImage } from "./CardImage"
 
-export const Item = ({ image, title, colorCard, width, height, id }) => {
+export const Item = ({ title, titlePercent, colorCard, width, height, image }) => {
+  const { ProducMilkId } = useCategoryMilk()
   return (
-    <ContainerItem className={colorCard} id={id}>
-      <Milk src={WhiteMilk} alt="milk" />
-      <Image src={image} alt="catalog-milks" width={width} height={height} />
-      <NameCatalog>
-        <h3>{title}</h3>
-        <Button color={colorCard}>Узнать подробнее</Button>
+    <ContainerItem className={colorCard} id={colorCard}>
+      <CardImage width={width} height={height} image={image} />
+      <NameCatalog className={titlePercent}>
+        {titlePercent ? (
+          <h3>{titlePercent}</h3>
+        ) : (
+          <>
+            <h3>{title}</h3>
+            <Button color={colorCard} onClick={() => ProducMilkId(title)}>
+              Узнать подробнее
+            </Button>
+          </>
+        )}
       </NameCatalog>
     </ContainerItem>
   )
@@ -28,47 +37,35 @@ const ContainerItem = styled.div`
   background-color: ${(props) => props.className};
 
   & ::before {
-    display: ${(props) => (props.id === 2 ? "inline-block" : "none")};
+    display: ${(props) => (props.id === "#B5CB07" ? "inline-block" : "none")};
     content: url("/public/flower.svg");
     position: absolute;
     left: -40px;
-    bottom: -70px;
+    bottom: -80px;
   }
   & ::after {
-    display: ${(props) => (props.id === 2 ? "inline-block" : "none")};
+    display: ${(props) => (props.id === "#B5CB07" ? "inline-block" : "none")};
     content: url("/public/flower.svg");
     position: absolute;
-    bottom: 520px;
+    bottom: 500px;
     right: -35px;
   }
 `
 
-const Image = styled.img`
-  position: relative;
-  width: ${(props) => props.width};
-  height: ${(props) => props.height};
-  transform: translate(0, -40px);
-  z-index: 1;
-`
-
-const Milk = styled.img`
-  position: absolute;
-  right: -80px;
-  width: 550px;
-  transform: translate(0, -40px);
-`
 const NameCatalog = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
+  gap: 15px 0;
   align-items: center;
   position: absolute;
-  bottom: 20px;
+  bottom: ${(props) => (props.className ? "60px" : "20px")};
 
   & h3 {
     font-size: 28px;
     color: #ffffff;
     font-weight: 800px;
+    text-align: center;
     line-height: 22.3px;
   }
 
