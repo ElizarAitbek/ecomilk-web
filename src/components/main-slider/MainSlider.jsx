@@ -1,11 +1,10 @@
-import React from "react"
 import styled from "styled-components"
-import { MainBg, HeroTitle } from "../assets"
+import { HeroTitle, MainBg } from "../../assets"
 
-export default function MainPage() {
+export default function MainSlider() {
   return (
     <StyledMainPage>
-      <MainBackgroundHandler></MainBackgroundHandler>
+      <MainBackgroundHandler />
       <img src={HeroTitle} alt="Main title" />
     </StyledMainPage>
   )

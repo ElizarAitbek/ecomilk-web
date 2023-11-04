@@ -1,20 +1,39 @@
-import styled from "styled-components"
 import { Link } from "react-router-dom"
+import styled from "styled-components"
 
 export default function Header() {
+  const handleScroll = (e) => {
+    e.preventDefault()
+    const href = e.currentTarget.getAttribute("href")
+    const offsetTop = document.querySelector(href).offsetTop
+
+    window.scrollTo({
+      top: offsetTop,
+      behavior: "smooth",
+    })
+  }
+
   return (
     <StyledHeaderMain>
-      <Link to="/">
+      <Link href="/">
         <img src="/logo.svg" alt="ecomilk logo" />
       </Link>
 
       <StyledHeaderNav>
         <Link to="/">Главная</Link>
-        <Link to="/about">О компании</Link>
-        <Link to="/news">Новости</Link>
+        <a href="#about" onClick={handleScroll}>
+          О компании
+        </a>
+        <a href="#news" onClick={handleScroll}>
+          Новости
+        </a>
         <Link to="/discounts">Акции</Link>
-        <Link to="/discounts">Каталог</Link>
-        <Link to="/jobs">Вакансии</Link>
+        <a href="#catalog" onClick={handleScroll}>
+          Каталог
+        </a>
+        <a href="#vacancies" onClick={handleScroll}>
+          Вакансии
+        </a>
       </StyledHeaderNav>
 
       <StyledHeaderButton>Позвонить нам</StyledHeaderButton>

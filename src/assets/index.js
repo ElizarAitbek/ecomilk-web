@@ -3,6 +3,8 @@ export { default as HeroTitle } from "./img/ecomilk-title.png"
 export { default as FirstInfoCard } from "./img/info-card-one.png"
 export { default as SecondInfoCard } from "./img/info-card-two.png"
 export { default as SalesInfo } from "./img/sales-info.png"
+export { default as Landscape } from "./img/landscape.png"
+export { default as VacancyImage } from "./img/vacancy-image.png"
 
 // icons exports
 export { default as ArrowDown } from "./icons/arrow-down.svg"
