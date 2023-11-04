@@ -2,25 +2,26 @@ import React from "react"
 import styled from "styled-components"
 import { useCategoryMilk } from "../../hooks/useCategoryMilk"
 
-import { Item } from "../UI/card/Item"
-import { CatalogCard } from "./CatalogCard"
+import { Card } from "../UI/card/Card"
+import { InfoProductList } from "./CatalogCard"
 import { catalogItem } from "../../utils/constants"
 
 export const InfoProduct = () => {
   const { category } = useCategoryMilk()
+
   const newCatalogItem = catalogItem.find((item) => item.name === category)
 
-  console.log(newCatalogItem)
   return (
     <WrapperProductInfo>
       <CatalogTitle>Каталог</CatalogTitle>
+
       <ContainerForImgCard>
         <ContainerImage>
           {newCatalogItem?.additionalImg?.map((item) => (
-            <Item key={item.id} {...item} />
+            <Card key={item.id} {...item} />
           ))}
         </ContainerImage>
-        <CatalogCard {...newCatalogItem} />
+        <InfoProductList {...newCatalogItem} />
       </ContainerForImgCard>
     </WrapperProductInfo>
   )

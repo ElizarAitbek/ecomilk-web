@@ -3,7 +3,7 @@ import styled from "styled-components"
 import { useCategoryMilk } from "../../hooks/useCategoryMilk"
 import { cardItems } from "../../utils/constants"
 
-export const CatalogCard = ({ packageName, fatPercentage, liter, day }) => {
+export const InfoProductList = ({ packageName, fatPercentage, liter, day }) => {
   const { category } = useCategoryMilk()
   const newCategory = cardItems.find((item) => item.title === category)
 
