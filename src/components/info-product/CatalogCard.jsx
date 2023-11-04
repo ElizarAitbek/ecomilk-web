@@ -3,7 +3,7 @@ import styled from "styled-components"
 import { useCategoryMilk } from "../../hooks/useCategoryMilk"
 import { cardItems } from "../../utils/constants"
 
-export const CatalogCard = ({ packageName, fatPercentage, liter, day }) => {
+export const InfoProductList = ({ packageName, fatPercentage, liter, day }) => {
   const { category } = useCategoryMilk()
   const newCategory = cardItems.find((item) => item.title === category)
 
@@ -38,8 +38,8 @@ const InfoAboutProduct = styled.ul`
   list-style: none;
 
   & li {
-    width: 781px;
-    height: 82px;
+    width: 500px;
+    height: 75px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -55,6 +55,7 @@ const InfoAboutProduct = styled.ul`
 `
 const InformationDegree = styled.p`
   color: #b5b5b5;
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 300;
+  line-height: 27px;
 `

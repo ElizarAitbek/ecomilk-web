@@ -1,22 +1,83 @@
 import React from "react"
 import styled from "styled-components"
-import { cardItems } from "../../../utils/constants.js"
-import { Item } from "./Item.jsx"
+import { Button } from "../button/Button"
+import { CardImage } from "./CardImage"
+import { useNavigate } from "react-router-dom"
 
-export const Card = () => {
+export const Card = ({ title, titlePercent, colorCard, width, height, image }) => {
+  let navigate = useNavigate()
+
+  const handleNavigateToProductPage = (productTitle) => {
+    navigate(`/product-info?title=${encodeURIComponent(productTitle)}`)
+  }
+
   return (
-    <Wrapper>
-      {cardItems.map((item) => (
-        <Item key={item.id} {...item} />
-      ))}
-    </Wrapper>
+    <ContainerItem className={colorCard} id={colorCard}>
+      <CardImage width={width} height={height} image={image} />
+      <NameCatalog className={titlePercent}>
+        {titlePercent ? (
+          <h3>{titlePercent}</h3>
+        ) : (
+          <>
+            <h3>{title}</h3>
+            <Button color={colorCard} onClick={() => handleNavigateToProductPage(title)}>
+              Узнать подробнее
+            </Button>
+          </>
+        )}
+      </NameCatalog>
+    </ContainerItem>
   )
 }
 
-const Wrapper = styled.section`
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  grid-column-gap: 35px;
-  grid-row-gap: 43px;
+const ContainerItem = styled.div`
+  width: 353px;
+  height: 574px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  position: relative;
+  background-color: ${(props) => props.className};
+
+  & ::before {
+    display: ${(props) => (props.id === "#B5CB07" ? "inline-block" : "none")};
+    content: url("/public/flower.svg");
+    position: absolute;
+    left: -40px;
+    bottom: -80px;
+  }
+
+  & ::after {
+    display: ${(props) => (props.id === "#B5CB07" ? "inline-block" : "none")};
+    content: url("/public/flower.svg");
+    position: absolute;
+    bottom: 480px;
+    right: -45px;
+  }
+`
+
+const NameCatalog = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px 0;
+  align-items: center;
+  position: absolute;
+  bottom: 20px;
+
+  & h3 {
+    font-size: 28px;
+    color: #ffffff;
+    font-weight: 800px;
+    text-align: center;
+    line-height: 22.3px;
+  }
+
+  & button {
+    font-size: 18px;
+    font-weight: 600px;
+    line-height: 34.3px;
+  }
 `
