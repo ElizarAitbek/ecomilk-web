@@ -14,9 +14,11 @@ export const Card = () => {
 }
 
 const Wrapper = styled.section`
+  max-width: 1920px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
   grid-column-gap: 35px;
   grid-row-gap: 43px;
+  padding: 0 80px;
 `

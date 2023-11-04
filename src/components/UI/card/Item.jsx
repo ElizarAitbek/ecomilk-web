@@ -31,8 +31,8 @@ export const Item = ({ title, titlePercent, colorCard, width, height, image }) =
 }
 
 const ContainerItem = styled.div`
-  width: 373px;
-  height: 594px;
+  width: 353px;
+  height: 574px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -52,8 +52,8 @@ const ContainerItem = styled.div`
     display: ${(props) => (props.id === "#B5CB07" ? "inline-block" : "none")};
     content: url("/public/flower.svg");
     position: absolute;
-    bottom: 500px;
-    right: -35px;
+    bottom: 480px;
+    right: -45px;
   }
 `
 
@@ -64,7 +64,7 @@ const NameCatalog = styled.div`
   gap: 15px 0;
   align-items: center;
   position: absolute;
-  bottom: ${(props) => (props.className ? "60px" : "20px")};
+  bottom: 20px;
 
   & h3 {
     font-size: 28px;

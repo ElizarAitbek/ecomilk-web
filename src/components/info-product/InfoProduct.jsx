@@ -27,16 +27,14 @@ export const InfoProduct = () => {
 }
 
 const WrapperProductInfo = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 20px 0;
-  padding: 0 20px;
+  max-width: 1920px;
   margin-bottom: 50px;
 `
 
 const ContainerForImgCard = styled.div`
   display: flex;
   justify-content: space-between;
+  padding: 0 80px;
 `
 
 const CatalogTitle = styled.h1`
@@ -44,10 +42,15 @@ const CatalogTitle = styled.h1`
   font-size: 100px;
   font-weight: 800;
 `
+
 const ContainerImage = styled.section`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 1fr;
   grid-column-gap: 40px;
   grid-row-gap: 40px;
+
+  & h3 {
+    padding-bottom: 20px;
+  }
 `
