@@ -20,7 +20,8 @@ const StyledFooterMain = styled.footer`
   display: flex;
   flex-direction: column;
   font-weight: 300;
-  margin: 18px 0;
+  margin: 20px 0;
+  padding: 20px 80px;
   gap: 1.5rem;
 
   hr {
