@@ -43,7 +43,7 @@ const ContainerItem = styled.div`
 
   & ::before {
     display: ${(props) => (props.id === "#B5CB07" ? "inline-block" : "none")};
-    content: url("/public/flower.svg");
+    content: url("/flower.svg");
     position: absolute;
     left: -40px;
     bottom: -80px;
@@ -51,7 +51,7 @@ const ContainerItem = styled.div`
 
   & ::after {
     display: ${(props) => (props.id === "#B5CB07" ? "inline-block" : "none")};
-    content: url("/public/flower.svg");
+    content: url("/flower.svg");
     position: absolute;
     bottom: 480px;
     right: -45px;
