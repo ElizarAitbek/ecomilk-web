@@ -3,13 +3,16 @@ import styled from "styled-components"
 import { cardItems } from "../../utils/constants.js"
 import { Card } from "../UI/card/Card.jsx"
 
-export const AllProductList = () => {
+export const AllProductList = ({ title }) => {
   return (
-    <Wrapper>
-      {cardItems.map((item) => (
-        <Card key={item.id} {...item} />
-      ))}
-    </Wrapper>
+    <>
+      {title && <TitleText>Каталог</TitleText>}
+      <Wrapper>
+        {cardItems.map((item) => (
+          <Card key={item.id} {...item} />
+        ))}
+      </Wrapper>
+    </>
   )
 }
 
@@ -21,4 +24,10 @@ const Wrapper = styled.section`
   grid-column-gap: 35px;
   grid-row-gap: 43px;
   padding: 0 80px;
+`
+const TitleText = styled.h1`
+  font-size: 100px;
+  margin: 60px;
+  text-transform: uppercase;
+  text-align: center;
 `
