@@ -31,7 +31,8 @@ export const Card = ({ title, titlePercent, colorCard, width, height, image }) =
 }
 
 const ContainerItem = styled.div`
-  width: 353px;
+  max-width: 353px;
+  width: 80%;
   height: 574px;
   display: flex;
   flex-direction: column;
@@ -41,7 +42,7 @@ const ContainerItem = styled.div`
   position: relative;
   background-color: ${(props) => props.className};
 
-  & ::before {
+  ::before {
     display: ${(props) => (props.id === "#B5CB07" ? "inline-block" : "none")};
     content: url("/flower.svg");
     position: absolute;
@@ -49,12 +50,24 @@ const ContainerItem = styled.div`
     bottom: -80px;
   }
 
-  & ::after {
+  ::after {
     display: ${(props) => (props.id === "#B5CB07" ? "inline-block" : "none")};
     content: url("/flower.svg");
     position: absolute;
     bottom: 480px;
     right: -45px;
+  }
+
+  @media (max-width: 818px) {
+    ::before,
+    ::after {
+      display: none;
+    }
+  }
+
+  @media (max-width: 480px) {
+    max-width: 100%;
+    padding: 20px;
   }
 `
 
@@ -67,7 +80,7 @@ const NameCatalog = styled.div`
   position: absolute;
   bottom: 20px;
 
-  & h3 {
+  h3 {
     font-size: 28px;
     color: #ffffff;
     font-weight: 800px;
@@ -75,9 +88,19 @@ const NameCatalog = styled.div`
     line-height: 22.3px;
   }
 
-  & button {
+  button {
     font-size: 18px;
     font-weight: 600px;
     line-height: 34.3px;
+  }
+
+  @media (max-width: 480px) {
+    h3 {
+      font-size: 20px;
+    }
+
+    button {
+      font-size: 14px;
+    }
   }
 `

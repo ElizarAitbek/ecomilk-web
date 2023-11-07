@@ -1,5 +1,4 @@
 import About from "components/about/About"
-import MainSlider from "components/main-slider/MainSlider"
 import News from "components/news-block/News"
 import Vacancies from "../../components/vacancies/Vacancies"
 import { AllProductList } from "../../components/all-products/AllProductList"
@@ -7,9 +6,7 @@ import { AllProductList } from "../../components/all-products/AllProductList"
 export default function MainPage() {
   return (
     <>
-      <div id="home">
-        <MainSlider />
-      </div>
+      <div id="home"></div>
       <div id="about">
         <About />
       </div>

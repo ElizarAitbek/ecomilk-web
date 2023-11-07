@@ -16,9 +16,12 @@ export default function News({ title }) {
 
 const NewsRecommendations = styled.div`
   text-align: center;
+  padding: 2rem;
+  width: 100%;
+
   h1 {
-    font-size: 100px;
-    margin-bottom: 60px;
+    font-size: 6rem;
+    margin-bottom: 2rem;
     text-transform: uppercase;
   }
 
@@ -26,10 +29,29 @@ const NewsRecommendations = styled.div`
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
+    gap: 2rem;
   }
+
   img {
     border-radius: 10px;
-    width: 400px;
+    width: 100%;
+    max-width: 400px;
     object-fit: cover;
+  }
+
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 3rem;
+    }
+
+    img {
+      max-width: 40%;
+    }
+  }
+
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 2rem;
+    }
   }
 `

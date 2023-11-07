@@ -43,15 +43,30 @@ export default function Vacancies() {
 }
 const VacancyBlock = styled.div`
   text-align: center;
+  margin: 0 auto;
   h2 {
     font-size: 90px;
     margin: 60px;
     text-transform: uppercase;
   }
+
+  @media (max-width: 768px) {
+    h2 {
+      font-size: 4rem;
+      margin: 2rem 0;
+    }
+  }
+  @media (max-width: 480px) {
+    h2 {
+      font-size: 2rem;
+      margin: 2rem 0;
+    }
+  }
 `
 const VacancyCard = styled.div`
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 30px;
 `
 const CardItem = styled.section`
@@ -71,5 +86,19 @@ const CardItem = styled.section`
     text-align: center;
     font-size: 20px;
     font-weight: 800;
+  }
+
+  button {
+    font-size: 20px;
+  }
+
+  @media (max-width: 480px) {
+    width: 40%;
+    padding: 20px;
+    height: auto;
+    min-height: 300px;
+    h5 {
+      font-size: 1rem;
+    }
   }
 `

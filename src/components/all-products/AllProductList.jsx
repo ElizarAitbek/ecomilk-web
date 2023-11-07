@@ -17,17 +17,31 @@ export const AllProductList = ({ title }) => {
 }
 
 const Wrapper = styled.section`
-  max-width: 1920px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  grid-column-gap: 35px;
-  grid-row-gap: 43px;
-  padding: 0 80px;
+  max-width: 1220px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 30px;
+  margin: 0 auto;
+
+  @media (max-width: 1115px) {
+    width: 100%;
+    justify-content: center;
+  }
 `
 const TitleText = styled.h1`
   font-size: 100px;
   margin: 60px;
   text-transform: uppercase;
   text-align: center;
+
+  @media (max-width: 768px) {
+    font-size: 4rem;
+    margin: 2rem 0;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 3rem;
+    margin: 1.5rem 0;
+  }
 `
