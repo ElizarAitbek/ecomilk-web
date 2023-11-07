@@ -39,4 +39,16 @@ const StyledFooterMain = styled.footer`
     color: #b5b5b5;
     margin-left: 2px;
   }
+  @media (max-width: 480px) {
+    padding: 10px 20px;
+    font-size: 10px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    article {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
 `

@@ -16,6 +16,16 @@ const Image = styled.img`
   height: ${(props) => props.height};
   transform: translate(0, -40px);
   z-index: 1;
+
+  @media (max-width: 768px) {
+  }
+
+  @media (max-width: 480px) {
+    padding: 20px;
+    width: 310px;
+    height: 400px;
+    object-fit: contain;
+  }
 `
 
 const Milk = styled.img`

@@ -35,6 +35,7 @@ export default withLayout(DiscountsPage)
 
 const StyledDiscountPage = styled.main`
   padding-top: 100px;
+  width: 100vw;
   height: 100vh;
   position: relative;
   background-color: rgba(0, 0, 0, 0.3);
@@ -45,10 +46,37 @@ const DiscountTitle = styled.section`
   margin-left: 100px;
   h2 {
     font-size: 80px;
-    width: 750px;
+    width: 70%;
   }
   p {
     font-size: 24px;
+    width: 70%;
+  }
+  @media (max-width: 768px) {
+    margin-top: 100px;
+    margin-left: 80px;
+    h2 {
+      font-size: 6rem;
+    }
+  }
+
+  @media (max-width: 590px) {
+    margin: 60px auto;
+    padding: 0 30px;
+    height: 70vh;
+
+    h2 {
+      font-size: 3.5rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    margin: 60px auto;
+    height: 10vh;
+
+    h2 {
+      font-size: 3.3rem;
+    }
   }
 `
 
@@ -79,7 +107,32 @@ const AboutProduct = styled.div`
   }
 
   img {
-    width: 650px;
+    width: 100%;
+    max-width: 650px;
     border-radius: 10px;
+  }
+  @media (max-width: 768px) {
+    gap: 100px;
+    margin-bottom: 80px;
+
+    p {
+      width: 90%;
+      font-size: 20px;
+      line-height: inherit;
+      font-family: "Gilroy-Light", sans-serif;
+      margin-top: 0px;
+    }
+    img {
+      width: 60%;
+    }
+  }
+  @media (max-width: 480px) {
+    p {
+      width: 90%;
+      font-size: 1rem;
+      line-height: inherit;
+      font-family: "Gilroy-Light", sans-serif;
+      margin-top: 0px;
+    }
   }
 `

@@ -27,21 +27,58 @@ const AboutCompany = styled.div`
   align-items: center;
   justify-content: center;
   text-align: center;
-  gap: 60px;
+  gap: 50px;
   color: #fff;
-  width: 100%;
-  height: 664px;
-  aspect-ratio: 2/1;
+  height: 60vh;
+  width: 100vw;
   background: rgba(37, 37, 37, 0.6);
   position: relative;
   margin-bottom: 80px;
+
   h2 {
     font-size: 90px;
   }
   p {
     font-size: 24px;
     width: 80%;
-    padding-bottom: 160px;
+    bottom: 160px;
+  }
+
+  @media (max-width: 1020px) {
+    gap: 0px;
+
+    h2 {
+      font-size: 3em;
+    }
+    p {
+      font-size: 1.25em;
+      width: 100%;
+      padding: 40px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    h2 {
+      font-size: 2em;
+    }
+    p {
+      font-size: 1em;
+      padding: 40px;
+    }
+  }
+
+  @media (max-width: 500px) {
+    margin-bottom: 30px;
+    padding: 10px;
+    margin-bottom: 0;
+
+    h2 {
+      font-size: 2em;
+    }
+    p {
+      font-size: 12px;
+      padding: 10px;
+    }
   }
 `
 
@@ -52,5 +89,7 @@ const AboutBackgroundHandler = styled.div`
   top: 0;
   z-index: -1;
   background: url(${Landscape});
+  background-position: center;
   background-size: cover;
+  object-fit: cover;
 `

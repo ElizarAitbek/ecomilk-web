@@ -58,9 +58,33 @@ const StyledHeaderMain = styled.header`
   img {
     width: 60px;
   }
+
+  @media (max-width: 1200px) {
+    margin: auto;
+    padding: 0 40px;
+    img {
+      width: 50px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 0 20px;
+    width: 100%;
+    img {
+      width: 40px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    padding: 0 10px;
+    img {
+      width: 30px;
+    }
+  }
 `
 const StyledHeaderNav = styled.nav`
   display: flex;
+  flex-wrap: wrap;
   gap: 90px;
   a {
     font-size: 1.25rem;
@@ -69,6 +93,37 @@ const StyledHeaderNav = styled.nav`
   }
   a:hover {
     color: #000;
+  }
+  @media (max-width: 1170px) {
+    gap: 45px;
+  }
+  @media (max-width: 973px) {
+    gap: 30px;
+    a {
+      font-size: 16px;
+    }
+  }
+
+  @media (max-width: 870px) {
+    gap: 27px;
+    a {
+      font-size: 15px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    gap: 60px;
+    display: none;
+    a {
+      font-size: 1rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    gap: 30px;
+    a {
+      font-size: 0.875rem;
+    }
   }
 `
 
@@ -86,5 +141,14 @@ const StyledHeaderButton = styled.button`
   &:hover {
     background-color: #ffffff;
     color: #000;
+  }
+  @media (max-width: 768px) {
+    width: 150px;
+    font-size: 1rem;
+  }
+
+  @media (max-width: 480px) {
+    width: 120px;
+    font-size: 0.875rem;
   }
 `
