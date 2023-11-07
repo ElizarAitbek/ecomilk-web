@@ -50,8 +50,15 @@ const NewsRecommendations = styled.div`
   }
 
   @media (max-width: 480px) {
+    padding: 0;
     h1 {
       font-size: 2rem;
+    }
+    section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
     }
   }
 `

@@ -94,16 +94,32 @@ const StyledHeaderNav = styled.nav`
   a:hover {
     color: #000;
   }
+  @media (max-width: 1170px) {
+    gap: 45px;
+  }
+  @media (max-width: 973px) {
+    gap: 30px;
+    a {
+      font-size: 16px;
+    }
+  }
+
+  @media (max-width: 870px) {
+    gap: 27px;
+    a {
+      font-size: 15px;
+    }
+  }
 
   @media (max-width: 768px) {
     gap: 60px;
+    display: none;
     a {
       font-size: 1rem;
     }
   }
 
   @media (max-width: 480px) {
-    display: none;
     gap: 30px;
     a {
       font-size: 0.875rem;
