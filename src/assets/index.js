@@ -28,3 +28,16 @@ export { default as CurdKiwi } from "./img/curd-kiwi.png"
 export { default as CurdStrawberry } from "./img/curd-strawberry.png"
 export { default as CurdChocolate } from "./img/curd-chocolate.png"
 export { default as MiniCondensedMilk } from "./img/mini-condensed-milk.png"
+
+// slides
+
+export { default as SlideOne } from "./slides/slide-1.png"
+export { default as SlideTwo } from "./slides/slide-2.png"
+export { default as SlideThree } from "./slides/slide-3.png"
+export { default as SlideFour } from "./slides/slide-4.png"
+export { default as SlideFive } from "./slides/slide-5.png"
+
+export { default as ItemTwo } from "./slides/item-2.png"
+export { default as ItemThree } from "./slides/item-3.png"
+export { default as ItemFour } from "./slides/item-4.png"
+export { default as ItemFive } from "./slides/item-5.png"

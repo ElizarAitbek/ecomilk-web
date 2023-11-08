@@ -16,6 +16,15 @@ import {
   CurdStrawberry,
   MiniCondensedMilk,
   KefirWoilet,
+  SlideOne,
+  SlideTwo,
+  SlideThree,
+  SlideFour,
+  SlideFive,
+  ItemTwo,
+  ItemThree,
+  ItemFour,
+  ItemFive,
 } from "../assets/index.js"
 
 export const cardItems = [
@@ -318,5 +327,32 @@ export const catalogItem = [
         colorCard: "#8ABF68",
       },
     ],
+  },
+]
+
+export const SLIDES = [
+  {
+    id: 1,
+    image: SlideOne,
+  },
+  {
+    id: 2,
+    image: SlideTwo,
+    motion_item: ItemTwo,
+  },
+  {
+    id: 3,
+    image: SlideThree,
+    motion_item: ItemThree,
+  },
+  {
+    id: 4,
+    image: SlideFour,
+    motion_item: ItemFour,
+  },
+  {
+    id: 5,
+    image: SlideFive,
+    motion_item: ItemFive,
   },
 ]

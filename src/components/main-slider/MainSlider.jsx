@@ -1,33 +1,29 @@
-import styled from "styled-components"
-import { HeroTitle, MainBg } from "../../assets"
+import { Swiper, SwiperSlide } from "swiper/react"
+import { Pagination, Autoplay, EffectFade } from "swiper/modules"
+import { SLIDES } from "../../utils/constants"
+import SliderItem from "../UI/slider-item/SliderItem"
+
+import "swiper/css"
+import "swiper/css/pagination"
+import "swiper/css/effect-fade"
+import "swiper/css/pagination"
 
 export default function MainSlider() {
   return (
-    <StyledMainPage>
-      <MainBackgroundHandler />
-      <img src={HeroTitle} alt="Main title" />
-    </StyledMainPage>
+    <Swiper
+      pagination={{
+        clickable: true,
+      }}
+      modules={[Pagination, Autoplay, EffectFade]}
+      effect={"fade"}
+      slidesPerView={1}
+      autoplay={{ delay: 3000 }}
+    >
+      {SLIDES.map((slide) => (
+        <SwiperSlide key={slide.id}>
+          <SliderItem bgimage={slide.image} action_element={slide.motion_item} />
+        </SwiperSlide>
+      ))}
+    </Swiper>
   )
 }
-const StyledMainPage = styled.main`
-  padding-top: 100px;
-  height: 100vh;
-  position: relative;
-  background-color: rgba(0, 0, 0, 0.4);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  img {
-    width: 90%;
-  }
-`
-const MainBackgroundHandler = styled.div`
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  background: url(${MainBg}) no-repeat center;
-  background-size: cover;
-  z-index: -1;
-  filter: blur(6px);
-`
