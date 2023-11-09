@@ -135,13 +135,10 @@ const StyledHeaderButton = styled.button`
   border-radius: 16px;
   height: 50px;
   padding: 10px 13px;
-  color: #fff;
-  background-color: #4267a4;
+  color: #000;
+  background-color: #fff;
   transition: all 0.3s;
-  &:hover {
-    background-color: #ffffff;
-    color: #000;
-  }
+
   @media (max-width: 870px) {
     display: none;
   }

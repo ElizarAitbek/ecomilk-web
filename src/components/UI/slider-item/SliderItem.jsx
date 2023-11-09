@@ -26,6 +26,8 @@ const StyledSliderItem = styled.div`
   }
 
   @media (max-width: 480px) {
+    height: 60vh;
+    background-size: contain;
   }
 `
 const MyCustomComponent = styled(motion.div)`
@@ -46,7 +48,7 @@ const MyCustomComponent = styled(motion.div)`
   }
 
   @media (max-width: 480px) {
-    width: 400px;
-    height: 400px;
+    width: 300px;
+    height: 300px;
   }
 `
