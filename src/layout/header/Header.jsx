@@ -50,7 +50,7 @@ const StyledHeaderMain = styled.header`
   margin: auto;
 
   position: absolute;
-  z-index: 1;
+  z-index: 3;
   top: 20px;
   max-width: 1920px;
   width: 100%;
@@ -71,6 +71,7 @@ const StyledHeaderMain = styled.header`
     padding: 0 20px;
     width: 100%;
     img {
+      display: none;
       width: 40px;
     }
   }
@@ -113,7 +114,6 @@ const StyledHeaderNav = styled.nav`
 
   @media (max-width: 768px) {
     gap: 60px;
-    display: none;
     a {
       font-size: 1rem;
     }
@@ -135,20 +135,11 @@ const StyledHeaderButton = styled.button`
   border-radius: 16px;
   height: 50px;
   padding: 10px 13px;
-  color: #fff;
-  background-color: #4267a4;
+  color: #000;
+  background-color: #fff;
   transition: all 0.3s;
-  &:hover {
-    background-color: #ffffff;
-    color: #000;
-  }
-  @media (max-width: 768px) {
-    width: 150px;
-    font-size: 1rem;
-  }
 
-  @media (max-width: 480px) {
-    width: 120px;
-    font-size: 0.875rem;
+  @media (max-width: 870px) {
+    display: none;
   }
 `

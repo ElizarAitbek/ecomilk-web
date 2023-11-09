@@ -21,6 +21,7 @@ h6 {
 
 button {
   cursor: pointer;
+  font-family: "Gilroy-Bold", sans-serif;
 }
 a {
   text-decoration: none;

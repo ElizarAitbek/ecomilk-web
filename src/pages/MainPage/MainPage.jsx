@@ -6,7 +6,6 @@ import { AllProductList } from "../../components/all-products/AllProductList"
 export default function MainPage() {
   return (
     <>
-      <div id="home"></div>
       <div id="about">
         <About />
       </div>
