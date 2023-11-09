@@ -1,5 +1,5 @@
 import React from "react"
-import styled from "styled-components"
+import styled, { keyframes } from "styled-components"
 
 import { useCategoryMilk } from "../../hooks/useCategoryMilk"
 import { cardItems } from "../../utils/constants"
@@ -85,6 +85,18 @@ const Description = styled.section`
   }
 `
 
+const translate = keyframes`
+  from {
+    transform: translateY(600px) scale(1.6);
+    opacity: 0;
+  }
+ 
+  to {
+    transform: translateY(0) scale(1.6);
+    opacity: 2;
+  }
+`
+
 const WrapperImage = styled.section`
   width: 40%;
   height: 700px;
@@ -108,5 +120,15 @@ const WrapperImage = styled.section`
       width: 250px;
       transform: none;
     }
+  }
+  & .products {
+    opacity: 0;
+    animation: ${translate} 1.3s forwards;
+    animation-delay: 3;
+  }
+
+  & .milk {
+    animation: ${translate} 1.3s forwards;
+    animation-delay: 2;
   }
 `
