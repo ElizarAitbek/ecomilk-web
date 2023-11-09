@@ -33,6 +33,10 @@ const CatalogContainer = styled.section`
   display: flex;
   flex-direction: column;
   gap: 100px;
+  @media (max-width: 768px) {
+    gap: 40px;
+    margin-bottom: 20px;
+  }
 `
 const InfoAboutProduct = styled.ul`
   list-style: none;
@@ -47,6 +51,9 @@ const InfoAboutProduct = styled.ul`
     font-size: 24px;
     font-weight: 800px;
     color: #242424;
+    @media (max-width: 768px) {
+      width: 100%;
+    }
   }
   & li:nth-of-type(2n + 1) {
     background-color: ${(props) => props.className};

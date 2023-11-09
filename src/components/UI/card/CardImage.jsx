@@ -30,6 +30,6 @@ const Image = styled.img`
 
 const Milk = styled.img`
   position: absolute;
-  width: 400px;
+  width: 390px;
   transform: translate(0, -20px);
 `

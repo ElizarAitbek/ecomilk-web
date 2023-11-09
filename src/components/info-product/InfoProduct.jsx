@@ -36,21 +36,40 @@ const ContainerForImgCard = styled.div`
   display: flex;
   justify-content: space-between;
   padding: 0 80px;
+  @media (max-width: 768px) {
+    flex-direction: column-reverse;
+    margin: 0 auto;
+  }
+  @media (max-width: 480px) {
+    padding: 0 30px;
+  }
 `
 
 const CatalogTitle = styled.h1`
   text-align: center;
   font-size: 100px;
   font-weight: 800;
+  @media (max-width: 480px) {
+    font-size: 4rem;
+  }
 `
 
 const ContainerImage = styled.section`
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 1fr;
-  grid-column-gap: 40px;
-  grid-row-gap: 40px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
 
+  @media (max-width: 768px) {
+    margin: 0 auto;
+    padding-left: 20%;
+  }
+
+  @media (max-width: 480px) {
+    width: 400px;
+    margin: 0 auto;
+    padding-left: 0;
+  }
   & h3 {
     padding-bottom: 20px;
   }
