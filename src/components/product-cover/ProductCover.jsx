@@ -125,6 +125,7 @@ const WrapperImage = styled.section`
     opacity: 0;
     animation: ${translate} 1.3s forwards;
     animation-delay: 3;
+    animation-direction: alternate;
   }
 
   & .milk {

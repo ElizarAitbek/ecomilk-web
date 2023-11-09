@@ -5,7 +5,7 @@ import { WhiteMilk } from "../../../assets/index"
 export const CardImage = ({ image, width, height }) => {
   return (
     <>
-      <Milk src={WhiteMilk} alt="milk" />
+      <Milk src={WhiteMilk} className="milk" alt="milk" />
       <Image className="products" src={image} alt="catalog-milks" width={width} height={height} />
     </>
   )
