@@ -101,8 +101,8 @@ export const cardItems = [
   {
     id: 8,
     title: "Сгущённое молоко",
-    width: "340px",
-    height: "488px",
+    width: "250px",
+    height: "390px",
     colorCard: "#37A1C5",
     description:
       "С проверенными продуктами готовить одно удовольствие. Они не подведут, они гарантируют результат. Именно поэтому они вдохновляют на новые кулинарные свершения. Молочные продукты под торговой маркой «ЭКОМИЛК» – те самые продукты, которые уже много лет занимают свое почетное место в холодильниках и ведут хозяек на новые кулинарные подвиги.",
@@ -130,8 +130,8 @@ export const catalogItem = [
       {
         id: 2,
         titlePercent: "Молоко 3,2",
-        width: "240px",
-        height: "400.9px",
+        width: "250px",
+        height: "410px",
         image: Milk,
         colorCard: "#B49FC3",
       },
@@ -157,8 +157,8 @@ export const catalogItem = [
       {
         id: 2,
         titlePercent: "Био Клубника 2,5%",
-        width: "740px",
-        height: "700.9px",
+        width: "410px",
+        height: "490.9px",
         image: Strawberry,
         colorCard: "#F2A998",
       },
@@ -313,8 +313,8 @@ export const catalogItem = [
       {
         id: 1,
         titlePercent: "Сгущенное молоко",
-        width: "420px",
-        height: "420px",
+        width: "250px",
+        height: "390px",
         image: CondensedMilk,
         colorCard: "#A5BADD",
       },
@@ -324,7 +324,7 @@ export const catalogItem = [
         width: "400px",
         height: "290px",
         image: MiniCondensedMilk,
-        colorCard: "#8ABF68",
+        colorCard: "#297FA8",
       },
     ],
   },

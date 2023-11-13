@@ -30,6 +30,7 @@ const Wrapper = styled.section`
   }
 `
 const TitleText = styled.h1`
+  width: 100%;
   font-size: 100px;
   margin: 60px;
   text-transform: uppercase;

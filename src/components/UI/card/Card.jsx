@@ -3,6 +3,7 @@ import styled from "styled-components"
 import { Button } from "../button/Button"
 import { CardImage } from "./CardImage"
 import { useNavigate } from "react-router-dom"
+import { motion } from "framer-motion"
 
 export const Card = ({ title, titlePercent, colorCard, width, height, image }) => {
   let navigate = useNavigate()
@@ -20,7 +21,14 @@ export const Card = ({ title, titlePercent, colorCard, width, height, image }) =
         ) : (
           <>
             <h3>{title}</h3>
-            <Button color={colorCard} onClick={() => handleNavigateToProductPage(title)}>
+            <Button
+              as={motion.button}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              color={colorCard}
+              onClick={() => handleNavigateToProductPage(title)}
+              href="#catalog-cover"
+            >
               Узнать подробнее
             </Button>
           </>
@@ -41,6 +49,11 @@ const ContainerItem = styled.div`
   border-radius: 10px;
   position: relative;
   background-color: ${(props) => props.className};
+
+  @media (width: 480px) {
+    width: 500px;
+    position: none;
+  }
 
   ::before {
     display: ${(props) => (props.id === "#B5CB07" ? "inline-block" : "none")};
@@ -66,7 +79,7 @@ const ContainerItem = styled.div`
   }
 
   @media (max-width: 480px) {
-    max-width: 100%;
+    max-width: 400px;
     padding: 20px;
   }
 `
@@ -85,13 +98,14 @@ const NameCatalog = styled.div`
     color: #ffffff;
     font-weight: 800px;
     text-align: center;
-    line-height: 22.3px;
+    line-height: 25.3px;
   }
 
-  button {
+  .aNavigation {
     font-size: 18px;
-    font-weight: 600px;
+    font-weight: 600;
     line-height: 34.3px;
+    font-family: "Gilroy-Bold";
   }
 
   @media (max-width: 480px) {
