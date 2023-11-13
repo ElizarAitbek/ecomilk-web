@@ -3,6 +3,7 @@ import styled from "styled-components"
 import { Button } from "../button/Button"
 import { CardImage } from "./CardImage"
 import { useNavigate } from "react-router-dom"
+import { motion } from "framer-motion"
 
 export const Card = ({ title, titlePercent, colorCard, width, height, image }) => {
   let navigate = useNavigate()
@@ -21,6 +22,9 @@ export const Card = ({ title, titlePercent, colorCard, width, height, image }) =
           <>
             <h3>{title}</h3>
             <Button
+              as={motion.button}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
               color={colorCard}
               onClick={() => handleNavigateToProductPage(title)}
               href="#catalog-cover"
@@ -97,10 +101,11 @@ const NameCatalog = styled.div`
     line-height: 25.3px;
   }
 
-  button {
+  .aNavigation {
     font-size: 18px;
-    font-weight: 600px;
+    font-weight: 600;
     line-height: 34.3px;
+    font-family: "Gilroy-Bold";
   }
 
   @media (max-width: 480px) {

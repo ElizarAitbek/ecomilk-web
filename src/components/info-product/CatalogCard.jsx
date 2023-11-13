@@ -36,13 +36,17 @@ const CatalogContainer = styled.section`
   @media (max-width: 768px) {
     gap: 40px;
     margin-bottom: 20px;
+    padding: 80px;
+  }
+  @media (max-width: 480px) {
+    padding: 0;
   }
 `
 const InfoAboutProduct = styled.ul`
   list-style: none;
-
   & li {
     width: 500px;
+
     height: 75px;
     display: flex;
     justify-content: space-between;

@@ -36,9 +36,14 @@ const ContainerForImgCard = styled.div`
   display: flex;
   justify-content: space-between;
   padding: 0 80px;
+  @media (max-width: 1015px) {
+    flex-wrap: wrap-reverse;
+  }
+
   @media (max-width: 768px) {
     flex-direction: column-reverse;
     margin: 0 auto;
+    padding: 0;
   }
   @media (max-width: 480px) {
     padding: 0 30px;
@@ -57,19 +62,17 @@ const CatalogTitle = styled.h1`
 const ContainerImage = styled.section`
   width: 100%;
   display: flex;
-  flex-wrap: wrap;
   gap: 40px;
+  @media (max-width: 1115px) {
+    width: 100%;
+    justify-content: center;
+  }
 
   @media (max-width: 768px) {
-    margin: 0 auto;
-    padding-left: 20%;
+    flex-wrap: wrap;
+    gap: 30px;
   }
 
-  @media (max-width: 480px) {
-    width: 400px;
-    margin: 0 auto;
-    padding-left: 0;
-  }
   & h3 {
     padding-bottom: 20px;
   }
