@@ -17,7 +17,7 @@ export const AllProductList = ({ title }) => {
 }
 
 const Wrapper = styled.section`
-  max-width: 1220px;
+  max-width: 1120px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -30,7 +30,6 @@ const Wrapper = styled.section`
   }
 `
 const TitleText = styled.h1`
-  width: 100%;
   font-size: 100px;
   margin: 60px;
   text-transform: uppercase;
