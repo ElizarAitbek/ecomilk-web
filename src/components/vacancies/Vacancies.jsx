@@ -90,6 +90,9 @@ const CardItem = styled.section`
 
   button {
     font-size: 20px;
+    a {
+      font-family: "Gilroy-Bold", sans-serif;
+    }
   }
 
   @media (max-width: 480px) {

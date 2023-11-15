@@ -1,41 +1,15 @@
 import { Link } from "react-router-dom"
 import styled from "styled-components"
+import HeaderNav from "../../components/UI/header-nav/HeaderNav"
 
-export default function Header() {
-  const handleScroll = (e) => {
-    e.preventDefault()
-    const href = e.currentTarget.getAttribute("href")
-    const offsetTop = document.querySelector(href).offsetTop
-
-    window.scrollTo({
-      top: offsetTop,
-      behavior: "smooth",
-    })
-  }
-
+export default function Header({ variant }) {
   return (
     <StyledHeaderMain>
-      <Link href="/">
+      <Link to="/">
         <img src="/logo.svg" alt="ecomilk logo" />
       </Link>
 
-      <StyledHeaderNav>
-        <Link to="/">Главная</Link>
-        <a href="#about" onClick={handleScroll}>
-          О компании
-        </a>
-        <a href="#news" onClick={handleScroll}>
-          Новости
-        </a>
-        <Link to="/discounts">Акции</Link>
-        <a href="#catalog" onClick={handleScroll}>
-          Каталог
-        </a>
-        <a href="#vacancies" onClick={handleScroll}>
-          Вакансии
-        </a>
-      </StyledHeaderNav>
-
+      <HeaderNav variant={variant} />
       <StyledHeaderButton>Позвонить нам</StyledHeaderButton>
     </StyledHeaderMain>
   )
@@ -58,7 +32,6 @@ const StyledHeaderMain = styled.header`
   img {
     width: 60px;
   }
-
   @media (max-width: 1200px) {
     margin: auto;
     padding: 0 40px;
@@ -67,12 +40,14 @@ const StyledHeaderMain = styled.header`
     }
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 770px) {
     padding: 0 20px;
     width: 100%;
     img {
-      display: none;
       width: 40px;
+    }
+    nav {
+      display: none;
     }
   }
 
@@ -80,49 +55,6 @@ const StyledHeaderMain = styled.header`
     padding: 0 10px;
     img {
       width: 30px;
-    }
-  }
-`
-const StyledHeaderNav = styled.nav`
-  display: flex;
-  flex-wrap: wrap;
-  gap: 90px;
-  a {
-    font-size: 1.25rem;
-    color: #fff;
-    transition: all 0.3s;
-  }
-  a:hover {
-    color: #000;
-  }
-  @media (max-width: 1170px) {
-    gap: 45px;
-  }
-  @media (max-width: 973px) {
-    gap: 30px;
-    a {
-      font-size: 16px;
-    }
-  }
-
-  @media (max-width: 870px) {
-    gap: 27px;
-    a {
-      font-size: 15px;
-    }
-  }
-
-  @media (max-width: 768px) {
-    gap: 60px;
-    a {
-      font-size: 1rem;
-    }
-  }
-
-  @media (max-width: 480px) {
-    gap: 30px;
-    a {
-      font-size: 0.875rem;
     }
   }
 `
@@ -139,7 +71,13 @@ const StyledHeaderButton = styled.button`
   background-color: #fff;
   transition: all 0.3s;
 
-  @media (max-width: 870px) {
+  @media (max-width: 1300px) {
+    width: 170px;
+    height: 45px;
+    font-size: 18px;
+  }
+
+  @media (max-width: 930px) {
     display: none;
   }
 `

@@ -1,12 +1,15 @@
 import React from "react"
-import { withLayout } from "../../layout/Layout"
+
 import { ArrowDown, MainBg, SalesInfo } from "../../assets"
 import styled from "styled-components"
 import News from "components/news-block/News"
+import Header from "../../layout/header/Header"
+import Footer from "../../layout/footer/Footer"
 
 function DiscountsPage() {
   return (
     <div>
+      <Header variant="non_active" />
       <StyledDiscountPage>
         <MainBackgroundHandler />
         <DiscountTitle>
@@ -27,11 +30,12 @@ function DiscountsPage() {
         <img src={SalesInfo} alt="Sale image" />
       </AboutProduct>
       <News title="похожие новости" />
+      <Footer />
     </div>
   )
 }
 
-export default withLayout(DiscountsPage)
+export default DiscountsPage
 
 const StyledDiscountPage = styled.main`
   padding-top: 100px;
