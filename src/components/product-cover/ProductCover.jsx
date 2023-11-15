@@ -30,7 +30,7 @@ const ProductCover = () => {
   const newProduct = cardItems.find((item) => item.title === category)
 
   return (
-    <WrapperProduct className={newProduct.colorCard} id="catalog-cover">
+    <WrapperProduct className={newProduct.gradient} id="catalog-cover">
       <Description>
         <h1>{newProduct.title}</h1>
         <p>{newProduct.description}</p>
@@ -45,7 +45,7 @@ const ProductCover = () => {
 export default ProductCover
 
 const WrapperProduct = styled.div`
-  background: ${(props) => props.className};
+  background: radial-gradient(${(props) => props.className});
   width: 100%;
   height: 100vh;
   display: flex;

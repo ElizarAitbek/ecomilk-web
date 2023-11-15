@@ -62,6 +62,7 @@ const CatalogTitle = styled.h1`
 const ContainerImage = styled.section`
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
   gap: 40px;
   @media (max-width: 1115px) {
     width: 100%;

@@ -3,7 +3,7 @@ import { motion } from "framer-motion"
 
 export default function SliderItem({ bgimage, action_element }) {
   return (
-    <StyledSliderItem bgimage={bgimage}>
+    <StyledSliderItem className={bgimage}>
       <MyCustomComponent action_element={action_element} />
     </StyledSliderItem>
   )
@@ -12,7 +12,7 @@ export default function SliderItem({ bgimage, action_element }) {
 const StyledSliderItem = styled.div`
   height: 100vh;
   width: 100%;
-  background-image: url(${({ bgimage }) => bgimage});
+  background-image: url(${({ className }) => className});
   background-size: cover;
   background-position: center;
 
@@ -26,8 +26,8 @@ const StyledSliderItem = styled.div`
   }
 
   @media (max-width: 480px) {
-    height: 60vh;
-    background-size: contain;
+    height: 55vh;
+    background-size: cover;
   }
 `
 const MyCustomComponent = styled(motion.div)`
