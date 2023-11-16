@@ -71,7 +71,7 @@ const StyledHeaderNav = styled.nav`
     }
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 770px) {
     gap: 60px;
     a {
       font-size: 1rem;
