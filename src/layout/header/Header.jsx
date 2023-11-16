@@ -1,25 +1,47 @@
 import { Link } from "react-router-dom"
 import styled from "styled-components"
 import HeaderNav from "../../components/UI/header-nav/HeaderNav"
+import { useState } from "react"
+import { HeaderBurgerMenu } from "./HeaderBurgerMenu"
 
 export default function Header({ variant }) {
+  const [isNavVisible, setIsNavVisible] = useState(false)
+
+  const toggleNavVisibility = () => {
+    setIsNavVisible((prev) => !prev)
+  }
   return (
     <StyledHeaderMain>
       <Link to="/">
         <img src="/logo.svg" alt="ecomilk logo" />
       </Link>
-
       <HeaderNav variant={variant} />
+      <BurgerContainer onClick={toggleNavVisibility}>
+        <BurgerIcon>&#9776;</BurgerIcon>
+      </BurgerContainer>
+      {isNavVisible ? <HeaderBurgerMenu variant={variant} closeMenu={toggleNavVisibility} /> : null}
       <StyledHeaderButton>Позвонить нам</StyledHeaderButton>
     </StyledHeaderMain>
   )
 }
+const BurgerContainer = styled.div`
+  cursor: pointer;
+  display: none;
+
+  @media (max-width: 770px) {
+    display: block;
+  }
+`
+
+const BurgerIcon = styled.div`
+  font-size: 2rem;
+  color: #ffffff;
+`
 
 const StyledHeaderMain = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   padding: 0 80px;
   margin: auto;
 
