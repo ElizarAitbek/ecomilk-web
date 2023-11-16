@@ -65,7 +65,7 @@ const Backdrop = styled.div`
   left: 0;
 `
 const Container = styled.div`
-  position: absolute;
+  position: fixed;
   top: 0;
   width: 50%;
   height: 100vh;
@@ -75,7 +75,7 @@ const Container = styled.div`
   overflow-y: auto;
   transition: right 0.5s ease, opacity 0.3s ease;
   display: none;
-  border-radius: 0.5rem;
+  border-top-left-radius: 0.5rem;
   z-index: 222;
 
   @media (max-width: 770px) {
@@ -85,7 +85,7 @@ const Container = styled.div`
 `
 
 const CloseButton = styled.span`
-  font-size: 30px;
+  font-size: 40px;
   color: #fff;
   cursor: pointer;
   position: absolute;
@@ -97,6 +97,7 @@ const StyledNav = styled.div`
   display: flex;
   flex-direction: column;
   margin-top: 3rem;
+  /* padding-left: 4rem; */
   animation: fadeIn 0.5s ease;
   color: #000;
   @keyframes fadeIn {
@@ -133,11 +134,13 @@ const StyledLink = styled(Link)`
   font-size: 1.4rem;
   color: #fff;
   text-decoration: none;
-  padding-left: 2rem;
-  padding-top: 0.74rem;
-  padding-bottom: 0.74rem;
+  padding-left: 35%;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
   transition: transform 0.3s ease;
-
+  @media (max-width: 480px) {
+    padding-left: 30%;
+  }
   &:hover {
     transform: scale(1.05);
     background-color: gray;
@@ -148,15 +151,15 @@ const ScrollLink = styled.a`
   font-size: 1.4rem;
   color: black;
   text-decoration: none;
-  padding-top: 0.74rem;
-  padding-bottom: 0.74rem;
-
-  padding-left: 2rem;
-
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  padding-left: 35%;
   transition: transform 0.3s ease;
-
   &:hover {
     transform: scale(1.05);
     background-color: gray;
+  }
+  @media (max-width: 480px) {
+    padding-left: 30%;
   }
 `
