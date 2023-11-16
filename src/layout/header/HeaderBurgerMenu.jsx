@@ -67,8 +67,8 @@ const Backdrop = styled.div`
 const Container = styled.div`
   position: absolute;
   top: 0;
-  width: 25%;
-  height: 19.2rem;
+  width: 50%;
+  height: 100vh;
   background-color: #9c9c9c;
   right: -300px;
   z-index: 1000;
