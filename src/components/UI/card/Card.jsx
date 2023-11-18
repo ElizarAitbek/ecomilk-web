@@ -39,8 +39,8 @@ export const Card = ({ title, titlePercent, colorCard, width, height, image }) =
 }
 
 const ContainerItem = styled.div`
-  max-width: 353px;
-  width: 80%;
+  max-width: 400px;
+  width: 100%;
   height: 574px;
   display: flex;
   flex-direction: column;
@@ -49,7 +49,14 @@ const ContainerItem = styled.div`
   border-radius: 10px;
   position: relative;
   background-color: ${(props) => props.className};
-
+  @media (max-width: 880px) {
+    max-width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+  }
   @media (width: 480px) {
     width: 500px;
     position: none;

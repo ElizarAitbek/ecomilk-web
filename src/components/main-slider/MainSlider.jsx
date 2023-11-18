@@ -42,6 +42,14 @@ const SwiperOverrides = styled.div`
     height: 30px;
     background-size: cover;
     border: none;
+    @media (min-width: 480px) and (max-width: 769px) {
+      width: 20px;
+      height: 20px;
+    }
+    @media (max-width: 480px) {
+      width: 10px;
+      height: 10px;
+    }
   }
   .swiper-pagination-bullet-active {
     background: #5084ec;
