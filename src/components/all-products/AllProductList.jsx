@@ -17,13 +17,11 @@ export const AllProductList = ({ title }) => {
 }
 
 const Wrapper = styled.section`
-  max-width: 1120px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 30px;
-  margin: 0 auto;
-
+  justify-content: center;
+  gap: 5rem;
   @media (max-width: 1115px) {
     width: 100%;
     justify-content: center;

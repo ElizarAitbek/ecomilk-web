@@ -32,7 +32,7 @@ export const cardItems = [
     id: 1,
     title: "Молоко",
     width: "250px",
-    height: "410px",
+    height: "400px",
     colorCard: "#B49FC3",
     gradient: "61.76% 61.76% at 50% 50%, #A692BE 0%, #7B669F 100%",
     description:
@@ -42,8 +42,8 @@ export const cardItems = [
   {
     id: 2,
     title: "БИО Кефиры",
-    width: "240px",
-    height: "400.9px",
+    width: "270px",
+    height: "410.9px",
     colorCard: "#B5CB07",
     gradient: "177.19% 103.61% at 78.44% 53.24%, #B6E522 0%, #DED37B 100%",
 
@@ -102,8 +102,8 @@ export const cardItems = [
   {
     id: 7,
     title: "Творожный десерт",
-    width: "302px",
-    height: "303px",
+    width: "260px",
+    height: "260px",
     colorCard: "#4D6895",
     gradient: "229.14% 157.43% at -8.07% 202.24%, #08338F 0%, #8EA6D6 100%",
     description:
@@ -113,8 +113,8 @@ export const cardItems = [
   {
     id: 8,
     title: "Сгущённое молоко",
-    width: "250px",
-    height: "390px",
+    width: "180px",
+    height: "370px",
     colorCard: "#37A1C5",
     gradient: "177.19% 103.61% at 78.44% 53.24%, #3EABD1 0%, #2288AB 100%",
     description:
@@ -162,7 +162,7 @@ export const catalogItem = [
       {
         id: 1,
         titlePercent: "Биованиль 2,5%",
-        width: "240px",
+        width: "250px",
         height: "400.9px",
         image: Biokefir,
         colorCard: "#B5CB07",
@@ -326,8 +326,8 @@ export const catalogItem = [
       {
         id: 1,
         titlePercent: "Сгущенное молоко",
-        width: "250px",
-        height: "390px",
+        width: "180px",
+        height: "380px",
         image: CondensedMilk,
         colorCard: "#A5BADD",
       },

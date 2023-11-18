@@ -30,7 +30,7 @@ const AboutCompany = styled.div`
   gap: 50px;
   color: #fff;
   height: 60vh;
-  width: 100vw;
+  width: 100%;
   background: rgba(37, 37, 37, 0.6);
   position: relative;
   margin-bottom: 80px;

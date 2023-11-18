@@ -38,6 +38,12 @@ const NewsRecommendations = styled.div`
     max-width: 400px;
     object-fit: cover;
   }
+  @media (max-width: 896px) {
+    width: 100%;
+    img {
+      max-width: 600px;
+    }
+  }
 
   @media (max-width: 768px) {
     h1 {
@@ -59,6 +65,9 @@ const NewsRecommendations = styled.div`
       flex-direction: column;
       align-items: center;
       gap: 2rem;
+    }
+    img {
+      max-width: 400px;
     }
   }
 `
