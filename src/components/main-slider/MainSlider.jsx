@@ -19,6 +19,7 @@ export default function MainSlider() {
         effect={"fade"}
         slidesPerView={1}
         autoplay={{ delay: 3000 }}
+        lazy={true}
       >
         {SLIDES.map((slide) => (
           <SwiperSlide key={slide.id}>

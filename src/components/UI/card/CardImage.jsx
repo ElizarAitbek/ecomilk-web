@@ -35,7 +35,7 @@ const Image = styled.img`
 
 const Milk = styled.img`
   position: absolute;
-  width: 390px;
+  width: 340px;
   @media (min-width: 480px) and (max-width: 769px) {
     width: 22em;
   }

@@ -103,5 +103,13 @@ const CardItem = styled.section`
     h5 {
       font-size: 1rem;
     }
+    button {
+      font-size: 15px;
+      display: flex;
+      justify-content: center;
+      height: 35px;
+      position: relative;
+      top: 0.9rem;
+    }
   }
 `
