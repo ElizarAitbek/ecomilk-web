@@ -22,8 +22,9 @@ const Image = styled.img`
   transform: translate(0, -40px);
   z-index: 1;
   @media (min-width: 480px) and (max-width: 769px) {
-    width: 200px;
-    height: 300px;
+    width: 280px;
+    height: 390px;
+    object-fit: contain;
   }
   @media (max-width: 480px) {
     padding: 20px;
@@ -35,9 +36,10 @@ const Image = styled.img`
 
 const Milk = styled.img`
   position: absolute;
-  width: 340px;
+  width: 260px;
+
   @media (min-width: 480px) and (max-width: 769px) {
-    width: 22em;
+    width: 15em;
   }
 `
 export const MCardImage = motion(CardImage)

@@ -64,7 +64,7 @@ const WrapperProduct = styled.div`
 `
 
 const Description = styled.section`
-  width: 700px;
+  width: 100%;
   height: 300px;
   display: flex;
   flex-direction: column;
@@ -75,10 +75,10 @@ const Description = styled.section`
   }
   @media (max-width: 480px) {
     width: 100%;
-    height: 200px;
+    height: fit-content;
     align-items: center;
 
-    gap: 10px;
+    gap: 1px;
   }
 
   & h1 {
@@ -91,13 +91,12 @@ const Description = styled.section`
     }
   }
   & p {
-    font-size: 18px;
     font-weight: 300;
-    width: 500px;
+    width: 100%;
     position: relative;
     @media (max-width: 768px) {
       font-size: 16px;
-      width: 350px;
+      width: 100%;
     }
     @media (max-width: 480px) {
       width: 100%;
@@ -116,17 +115,20 @@ const WrapperImage = styled(motion.section)`
     width: 45%;
   }
   @media (max-width: 480px) {
-    width: 420px;
+    width: 350px;
     height: 350px;
   }
   & img {
     transform: scale(1.6);
+    @media (max-width: 990px) {
+      transform: scale(1.2);
+    }
 
     @media (max-width: 768px) {
-      transform: translate(20px, -50px);
+      transform: translate(6px, -50px);
     }
     @media (max-width: 480px) {
-      transform: translate(0, -55px);
+      transform: translate(0, -38px) scale(0.9);
     }
   }
 `

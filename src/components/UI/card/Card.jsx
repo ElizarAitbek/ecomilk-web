@@ -49,7 +49,7 @@ const ContainerItem = styled.div`
   border-radius: 10px;
   position: relative;
   background-color: ${(props) => props.className};
-  @media (max-width: 880px) {
+  @media (min-width: 655px) and (max-width: 880px) {
     max-width: 40%;
     display: flex;
     flex-direction: column;
@@ -57,6 +57,7 @@ const ContainerItem = styled.div`
     justify-content: center;
     border-radius: 10px;
   }
+
   @media (width: 480px) {
     width: 500px;
     position: none;
@@ -78,7 +79,7 @@ const ContainerItem = styled.div`
     right: -45px;
   }
 
-  @media (max-width: 818px) {
+  @media (max-width: 1000px) {
     ::before,
     ::after {
       display: none;
