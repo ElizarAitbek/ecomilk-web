@@ -92,14 +92,14 @@ const Description = styled.section`
   }
   & p {
     font-weight: 300;
-    width: 100%;
+    width: 80%;
     position: relative;
     @media (max-width: 768px) {
       font-size: 16px;
-      width: 100%;
+      width: 80%;
     }
     @media (max-width: 480px) {
-      width: 100%;
+      width: 80%;
       font-size: 16px;
       padding-left: 10px;
     }
