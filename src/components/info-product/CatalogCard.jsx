@@ -33,6 +33,7 @@ const CatalogContainer = styled.section`
   display: flex;
   flex-direction: column;
   gap: 100px;
+  padding-right: 60px;
   @media (max-width: 768px) {
     gap: 40px;
     margin-bottom: 20px;

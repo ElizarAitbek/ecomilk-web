@@ -119,7 +119,7 @@ const WrapperImage = styled(motion.section)`
     height: 350px;
   }
   & img {
-    transform: scale(1.6);
+    transform: scale(1.8);
     @media (max-width: 990px) {
       transform: scale(1.2);
     }
