@@ -33,9 +33,10 @@ const WrapperProductInfo = styled.div`
 `
 
 const ContainerForImgCard = styled.div`
+  margin-top: 20px;
   display: flex;
   justify-content: space-between;
-  padding: 0 80px;
+  padding: 0 0 0 165px;
   @media (max-width: 1015px) {
     flex-wrap: wrap-reverse;
   }
@@ -63,7 +64,7 @@ const ContainerImage = styled.section`
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  gap: 40px;
+  gap: 80px;
   @media (max-width: 1115px) {
     width: 100%;
     justify-content: center;
